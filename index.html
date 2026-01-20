@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phenomenon One</title>
+  <meta name="description" content="Design and research consultancy">
+  <style>
+    @font-face {
+      font-family: 'ABCROMNarrow';
+      src: url('ABCROMNarrow-Regular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'ABCROMNarrow', system-ui, sans-serif;
+      background: #1e1e1e;
+      color: rgba(255, 255, 255, 0.85);
+      min-height: 100vh;
+      padding: 2rem;
+      line-height: 1.5;
+    }
+
+    main {
+      max-width: 320px;
+    }
+
+    h1 {
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 1.2;
+      margin-bottom: 2rem;
+    }
+
+    .links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .circle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.85);
+      margin-bottom: 2rem;
+      animation: breathe 4s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="circle"></div>
+    <h1>Phenomenon One is a design and research consultancy providing qualitative research, strategic direction, and design services.</h1>
+    <nav class="links">
+      <a href="mailto:hello@phenomenon.one">Contact</a>
+      <a href="https://instagram.com/phenomenon.one">Instagram</a>
+    </nav>
+  </main>
+</body>
+</html>
