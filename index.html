@@ -63,21 +63,38 @@
       background: rgba(255, 255, 255, 0.85);
       margin-bottom: 2rem;
       animation: breathe 4s ease-in-out infinite;
+      cursor: pointer;
     }
 
     @keyframes breathe {
       0%, 100% { opacity: 0.2; }
       50% { opacity: 1; }
     }
+
+    body.light {
+      background: #e5e5e5;
+      color: rgba(0, 0, 0, 0.85);
+    }
+
+    body.light a {
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    body.light a:hover {
+      color: rgba(0, 0, 0, 1);
+    }
+
+    body.light .circle {
+      background: rgb(0, 0, 255);
+    }
   </style>
 </head>
 <body>
   <main>
-    <div class="circle"></div>
+    <div class="circle" onclick="document.body.classList.toggle('light')"></div>
     <h1>Phenomenon One is a qualitative data practice. In an age where information is increasingly globally aggregated and unattributed, we record, account for, describe, and explain its human meaning.</h1>
     <nav class="links">
-      <a href="mailto:hello@phenomenon.one">Contact</a>
-      <a href="https://instagram.com/phenomenon.one">Instagram</a>
+      <a href="mailto:info@johannesbay.com">Contact</a>
     </nav>
   </main>
 </body>
