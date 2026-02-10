@@ -88,6 +88,57 @@
       background: rgb(0, 0, 255);
     }
 
+    .projects {
+      margin-bottom: 2rem;
+    }
+
+    .project summary {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 0.5rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      list-style: none;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .project summary::-webkit-details-marker { display: none; }
+
+    .project:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+
+    .project-content {
+      padding: 0 0 0.5rem 0;
+    }
+
+    .project-image {
+      width: 100%;
+      aspect-ratio: 3/2;
+      background: #000;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    .project-date {
+      opacity: 0.6;
+    }
+
+    body.light .project summary {
+      border-color: rgba(0, 0, 0, 0.15);
+    }
+
+    body.light .project:last-child {
+      border-color: rgba(0, 0, 0, 0.15);
+    }
+
+    body.light .project-image {
+      background: #000;
+    }
+
     .address {
       position: fixed;
       bottom: 2rem;
@@ -103,10 +154,30 @@
   <main>
     <div class="circle" onclick="document.body.classList.toggle('light')"></div>
     <h1>Phenomenon One is a qualitative data practice. In an age where information is increasingly globally aggregated and unattributed, we record, account for, describe, and explain its human meaning.</h1>
-    <nav class="links">
-      <a href="mailto:info@johannesbay.com">Contact</a>
-    </nav>
+    <div class="projects">
+      <details class="project">
+        <summary><span>Franca</span><span class="project-date">2026&ndash;</span></summary>
+        <div class="project-content">
+          <div class="project-image"><img src="franca.png" alt="Franca" style="width:100%;height:100%;object-fit:contain"></div>
+          <a class="project-link" href="https://franca.world">View project &rarr;</a>
+        </div>
+      </details>
+      <details class="project">
+        <summary><span>TABLE WINE</span><span class="project-date">2025&ndash;</span></summary>
+        <div class="project-content">
+          <div class="project-image"><img src="tablewine.png" alt="TABLE WINE" style="width:100%;height:100%;object-fit:contain"></div>
+          <a class="project-link" href="https://tablewine.co.nz">View project &rarr;</a>
+        </div>
+      </details>
+      <details class="project">
+        <summary><span>orium.earth</span><span class="project-date">2016&ndash;</span></summary>
+        <div class="project-content">
+          <div class="project-image"><img src="orium.png" alt="orium.earth" style="width:100%;height:100%;object-fit:contain"></div>
+          <a class="project-link" href="https://www.orium.earth">View project &rarr;</a>
+        </div>
+      </details>
+    </div>
   </main>
-  <address class="address">Studio C, 40 Anzac Avenue, Auckland Central, Auckland 1010, New Zealand</address>
+  <address class="address"><a href="mailto:info@johannesbay.com">Contact</a><br>Studio C, 40 Anzac Avenue, Auckland Central, Auckland 1010, New Zealand</address>
 </body>
 </html>
